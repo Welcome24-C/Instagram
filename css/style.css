@@ -1,0 +1,250 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #fafafa;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ===== LOGIN PAGE LAYOUT ===== */
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  max-width: 935px;
+  width: 100%;
+  padding: 32px 0 0;
+  flex: 1;
+}
+
+/* ===== PHONE SECTION (LEFT) ===== */
+.phone-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ig-screenshot {
+  width: 520px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ===== FORM SECTION (RIGHT) ===== */
+.form-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 350px;
+}
+
+.login-box {
+  width: 100%;
+  background: #fff;
+  border: 1px solid #dbdbdb;
+  border-radius: 1px;
+  padding: 40px 40px 20px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.logo-text {
+  font-family: 'Grand Hotel', cursive;
+  font-size: 48px;
+  font-weight: 400;
+  color: #000;
+  margin-bottom: 24px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 12px;
+  font-family: 'Inter', sans-serif;
+  background: #fafafa;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  outline: none;
+  color: #262626;
+}
+
+.login-form input::placeholder {
+  color: #8e8e8e;
+  font-size: 12px;
+}
+
+.login-form input:focus {
+  border-color: #a8a8a8;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 8px 16px;
+  margin-top: 8px;
+  background: #0095f6;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.login-btn.active {
+  opacity: 1;
+}
+
+.login-btn:hover {
+  opacity: 0.85;
+}
+
+.login-btn:active {
+  opacity: 1;
+}
+
+/* ===== DIVIDER ===== */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin: 20px 0 20px;
+}
+
+.divider .line {
+  flex: 1;
+  height: 1px;
+  background: #dbdbdb;
+}
+
+.divider .or-text {
+  font-size: 13px;
+  font-weight: 600;
+  color: #8e8e8e;
+  text-transform: lowercase;
+}
+
+/* ===== SIGNUP ===== */
+.signup-section {
+  padding: 20px 0 10px;
+}
+
+.signup-section p {
+  font-size: 14px;
+  color: #262626;
+}
+
+.signup-section a {
+  color: #0095f6;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.signup-section a:hover {
+  text-decoration: underline;
+}
+
+/* ===== GET APP ===== */
+.get-app {
+  margin-top: 14px;
+  text-align: center;
+}
+
+.get-app p {
+  font-size: 14px;
+  color: #262626;
+}
+
+/* ===== FOOTER ===== */
+.login-footer {
+  padding: 24px 16px 40px;
+  width: 100%;
+  text-align: center;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 16px;
+  margin-bottom: 16px;
+}
+
+.footer-links a {
+  font-size: 12px;
+  color: #8e8e8e;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-copyright {
+  font-size: 12px;
+  color: #8e8e8e;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 876px) {
+  .phone-section {
+    display: none;
+  }
+
+  .login-page {
+    padding: 16px;
+  }
+
+  .form-section {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
+/* ===== TOAST NOTIFICATION ===== */
+.toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: #262626;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  z-index: 999;
+  opacity: 0;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.toast.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+.toast.success {
+  background: #00c853;
+}
+
+.toast.error {
+  background: #ff1744;
+}
