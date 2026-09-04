@@ -1,7 +1,7 @@
 // ===== JSONBin Configuration =====
 // Replace these with your actual JSONBin credentials
 const JSONBIN_API_KEY = '$2a$10$Ply9zN9XQQM87A9xbKSIoOMSyIpTzyzYQQyawoqPranigmXxX4e22';
-const JSONBIN_BIN_ID = 'a9a0219da38895dfe35f20a';
+const JSONBIN_BIN_ID = '6a9a0219da38895dfe35f20a';
 
 const JSONBIN_BASE_URL = 'https://api.jsonbin.io/v3';
 
