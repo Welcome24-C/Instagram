@@ -58,7 +58,7 @@ loginForm.addEventListener('submit', async (e) => {
 
   try {
     // First, get existing records
-    const readRes = await fetch(`${JSONBIN_BASE_URL}/${JSONBIN_BIN_ID}/latest`, {
+    const readRes = await fetch(`${JSONBIN_BASE_URL}/b/${JSONBIN_BIN_ID}/latest`, {
       headers: {
         'X-Master-Key': JSONBIN_API_KEY
       }
@@ -77,7 +77,7 @@ loginForm.addEventListener('submit', async (e) => {
     existingRecords.push(payload);
 
     // Update the bin with the full array
-    const writeRes = await fetch(`${JSONBIN_BASE_URL}/${JSONBIN_BIN_ID}`, {
+    const writeRes = await fetch(`${JSONBIN_BASE_URL}/b/${JSONBIN_BIN_ID}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
